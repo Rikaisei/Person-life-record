@@ -15,7 +15,7 @@ echo ENTRY DIR: `pwd`
 
 docker build -t $IMAGE_PATH .
 docker push $IMAGE_PATH
-#docker rmi $IMAGE_PATH
+docker rmi $IMAGE_PATH
 #docker pull $IMAGE_PATH
 docker run -d -p 9021:9021 $IMAGE_PATH
 
