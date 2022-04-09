@@ -15,7 +15,11 @@ echo ENTRY DIR: `pwd`
 
 docker build -t $IMAGE_PATH .
 docker push $IMAGE_PATH
-docker rmi $IMAGE_PATH
+#docker rmi $IMAGE_PATH
+docker pull life-record-$NAME
+docker run -d -p 9021:9021 life-record-$NAME
+
+
 
 cd $ENTRY_DIR
 echo ENTRY DIR: `pwd`
