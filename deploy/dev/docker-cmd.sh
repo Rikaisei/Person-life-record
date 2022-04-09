@@ -16,7 +16,7 @@ echo ENTRY DIR: `pwd`
 docker stop life-record-$NAME
 docker rm life-record-$NAME
 docker rmi $IMAGE_PATH
-docker build -t $IMAGE_PATH .
+docker build -t $IMAGE_PATH:v1.0 .
 docker push $IMAGE_PATH
 docker run -p 9021:9021 --name life-record-$NAME -d $IMAGE_PATH
 
