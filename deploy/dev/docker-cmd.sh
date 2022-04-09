@@ -13,12 +13,12 @@ echo IMAGE PATH: $IMAGE_PATH
 cd ../../life-record-$NAME/
 echo ENTRY DIR: `pwd`
 
-docker build -t $IMAGE_PATH .
-docker push $IMAGE_PATH
 docker stop life-record-$NAME
 docker rm life-record-$NAME
 docker rmi $IMAGE_PATH
-docker run -itd -p 9021:9021 $IMAGE_PATH --name life-record-$NAME
+docker build -t $IMAGE_PATH .
+docker push $IMAGE_PATH
+docker run -p 9021:9021 --name life-record-$NAME -d $IMAGE_PATH
 
 cd $ENTRY_DIR
 echo ENTRY DIR: `pwd`
