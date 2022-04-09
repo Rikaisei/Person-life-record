@@ -3,6 +3,8 @@
 IMAGE_URL=127.0.0.1:5000
 
 NAME=$1
+port=$2
+echo $port
 ENTRY_DIR=`pwd`
 TS=`date '+%Y%m%d%H%M%S'`
 IMAGE_PATH=$IMAGE_URL/life-record-$NAME
