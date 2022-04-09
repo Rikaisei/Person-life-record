@@ -19,8 +19,6 @@ docker rmi $IMAGE_PATH
 #docker pull $IMAGE_PATH
 docker run -d -p 9021:9021 $IMAGE_PATH
 
-
-
 cd $ENTRY_DIR
 echo ENTRY DIR: `pwd`
 echo DOCKER BUILD COMPLETED
