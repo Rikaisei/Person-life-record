@@ -9,6 +9,7 @@
   <version>1.0-SNAPSHOT</version>
   <modules>
     <module>life-record-eureka</module>
+      <module>life-record-database</module>
   </modules>
   <packaging>pom</packaging>
 
